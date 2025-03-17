@@ -1,0 +1,480 @@
+/******************************  VARIABLES  ******************************/
+:root{
+    --primaryColor: #e9e9e9;
+    --secondaryColor: rgb(221, 221, 221);
+    --tertiaryColor: rgb(208, 208, 208);
+    --quaternaryColor: #212121;
+    --quinaryColor: rgb(255, 255, 255);
+    --sixtharyColor: rgb(9, 9, 9);
+
+    --borderRadius: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Righteous", sans-serif;
+}
+
+body {
+    background-color: var(--primaryColor);
+}
+
+/******************************  HEADER  ******************************/
+header {
+    background-color: var(--secondaryColor);
+    display: flex;
+    
+    height: 6rem;
+    box-sizing: border-box;
+    padding: 2% 2%;
+    align-items: center;
+}
+
+body header :nth-child(2) {
+    position: absolute;
+    right: 2%;
+}
+
+/******* HEADER SCROLLING TEXT *******/
+.scrollingText {
+    width: 100%;                      /* largeur de la fenêtre */
+    overflow: hidden; 
+    width: 100%;
+    margin-right: 8%;
+    
+}
+
+header>div>p {  
+    padding-left: 2em;
+    width: 100%;
+    animation-name: defilement-rtl;       /* référence à la règle @keyframes mise en oeuvre */
+    animation-duration: 25s;              /* valeur à ajuster suivant la longueur du message */
+    animation-iteration-count: infinite;  /* boucle continue */
+    animation-timing-function: linear;    /* pas vraiment utile ici */
+    font-size: 40px;
+    color: rgb(191, 130, 31);
+    white-space: nowrap;                   /* pas de retour à la ligne */
+}
+
+@keyframes defilement-rtl {
+    0% {
+      transform: translate3d(100%,0,0);      /* position initiale à droite */
+    }
+    100% {
+      transform: translate3d(-100%,0,0);  /* position finale à gauche */
+    }
+  }
+
+
+  /******************************  MAIN  ******************************/
+  /******* Name & job *******/
+
+ .namePresentation {
+    margin: 12rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+ }
+
+ h1 {
+    font-size: 8em;
+    text-transform: uppercase;
+    font-weight: normal;
+ }
+
+ .namePresentation h2 {
+    font-size: 4rem;
+    font-weight: normal;    
+ }
+
+
+ /******* Who i am ? *******/
+ 
+ .presenetationMySelf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+ }
+ 
+ .presenetationMySelf > div{
+    background-color: var(--quaternaryColor);
+    border-radius: var(--borderRadius);
+    width: 70%;
+    height: 70em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+.presenetationMySelf > div > div {
+    background-color: var(--tertiaryColor);    
+    border-radius: var(--borderRadius);
+    width: 90%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+
+
+.presenetationMySelf h3 {
+    text-transform: uppercase;
+    text-align:left;
+    font-size: 2.5em;
+    margin-bottom: 2.5rem;
+}
+
+.card {
+    background-color: var(--quinaryColor);    
+    width: 50rem;
+    height: 40rem;
+    padding: 3.5em;
+    position:absolute;
+    box-shadow: rgba(0, 0, 0, 0.65) 0px 15px 45px;
+    transition: transform 0.8s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.side {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.sideFront {
+    z-index: 1;
+}
+
+.sideFont p {
+    width: 85%;
+    text-align: justify;
+    font-size: 1.5rem;
+}
+
+.sideBack {
+    transform: rotateY(180deg);
+    display: flex;
+}
+
+.sideBack p {
+    width: 25rem;
+    text-align: justify;
+    position:relative;
+    left: 6rem;
+    margin-left: 4rem;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+
+}
+
+.sideBack img {
+    width: 15rem;
+    height: 20rem;
+    position:relative;
+    left: 6rem;
+    top: -1rem;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;
+}
+
+
+/******* Skills in progress *******/
+
+
+
+.skills h2{
+    font-size: 4em;
+    font-weight: normal;  
+    margin: 8rem;
+}
+
+.skills > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skillsContainer {
+    width: 50%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills > div > div > .js {
+    background-image: url(pictures/Group\ 18.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+}
+
+.skills > div > div > .css {
+    background-image: url(pictures/css.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+}
+
+.skills >div > div > .symfony {
+    background-image: url(pictures/symfony.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+}
+
+.skills > div > div > .html {
+    background-image: url(pictures/html.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+}
+
+.skills > div > div > .angular {
+    background-image: url(pictures/angular.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+}
+
+.skills > div > div > .php {
+    background-image: url(pictures/php.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+}
+
+.skills > div > div > .wordpress {
+    background-image: url(pictures/wordpress.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+}
+
+.skills > div > div > .mysql {
+    background-image: url(pictures/mysql.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+}
+
+.cvContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.cvContainer > img {
+    width: 60%;    
+}
+
+
+
+
+/******* Professional Career *******/
+.professionalCareer {
+    height: 65rem;
+}
+
+.professionalCareer h2{
+    font-size: 4em;
+    font-weight: normal;  
+    margin: 8rem;
+    
+}
+
+.frenchMap {
+    
+    background-image: url(pictures/frenchMap.png);
+    
+    background-size:contain;
+    background-repeat: no-repeat;
+    width: 35%;
+    height: 50em;
+    justify-self: center;
+}
+
+.toulouse {
+    background-color: red;
+    width: 6em;
+    height: 6em;
+    position: relative;
+    left: 71em;
+    bottom: 11em;
+}
+
+
+
+.rodez {
+    background-color: green;
+    width: 6em;
+    height: 6em;
+    position: relative;
+    left: 73em;
+    bottom: 25em;
+}
+
+.saintQuentin {
+    background-color: purple;
+    width: 6em;
+    height: 6em;
+    position: relative;
+    left: 77em;
+    bottom: 53em;
+}
+
+.lyon {
+    background-color: orange;
+    width: 6em;
+    height: 6em;
+    position: relative;
+    left: 81em;
+    bottom: 42em;
+}
+
+.presentationExperience {
+    background-color: var(--secondaryColor);
+    border: solid var(--quaternaryColor) 2px;
+    width: 40rem;
+    height: auto;
+    position: absolute;
+    right: 550px;
+    bottom: 150px;
+    border-radius: var(--borderRadius);
+    padding: 0.8rem;
+
+}
+.presentationToulouse > h3 {
+    justify-self: center;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+
+}
+
+.explication {
+    width: 30rem;
+    font-size: 1.6rem;
+    text-align: justify;
+    position: relative;
+    left: 110rem;
+    bottom: 60rem;    
+}
+
+
+
+/* img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: drop-shadow(30px 10px 4px #4444dd);;
+} */
+
+
+/******* contact *******/
+.contact h2{
+    font-size: 4em;
+    font-weight: normal;  
+    margin: 8rem;
+}
+
+.contact > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    height: 50em;
+    width: 40%;
+    background-color: var(--secondaryColor);
+    margin-bottom: 10rem;
+    border-radius: var(--borderRadius);
+    padding: 5.5rem;
+    border: solid var(--quaternaryColor) 45px;
+}
+
+form > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+form > div > div {
+    display: flex;
+    align-items: center;  
+}
+
+form > div > div > input {
+    width: 50%;
+    flex-direction: row;
+}
+
+input {
+    margin: 0.8em;
+    height: 2rem;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 100%;
+    margin: 0.8em;
+    border-radius: 5px;
+}
+::placeholder {
+    padding-left: 5px;
+}
+
+form > p {
+    text-align: justify; 
+    margin: 0.8em;
+}
+
+
+.objet > input{
+    width: 100%;
+    
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+button {
+    background-color: var(--quaternaryColor);
+    color: var(--quinaryColor);
+    border-radius: 10px;
+    padding: 1em 2em;
+    cursor: pointer;
+}
