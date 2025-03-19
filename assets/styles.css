@@ -21,6 +21,12 @@ body {
     background-color: var(--primaryColor);
 }
 
+h2 {
+    border-top: #212121 solid 5px;
+    border-left: black solid 5px;
+    padding: 0.2em;
+}
+
 /******************************  HEADER  ******************************/
 header {
     background-color: var(--secondaryColor);
@@ -86,7 +92,8 @@ header>div>p {
 
  .namePresentation h2 {
     font-size: 4rem;
-    font-weight: normal;    
+    font-weight: normal;  
+    border: none;  
  }
 
 
@@ -97,6 +104,7 @@ header>div>p {
     justify-content: center;
     align-items: center;
     margin-top: 10rem;
+    
  }
  
  .presenetationMySelf > div{
@@ -107,6 +115,7 @@ header>div>p {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
  }
 
 .presenetationMySelf > div > div {
@@ -119,6 +128,7 @@ header>div>p {
     align-items: center;
     flex-direction: column;
     position: relative;
+    box-shadow: rgb(226, 205, 205,0.55) 0px 5px 20px;
 }
 
 
@@ -128,6 +138,7 @@ header>div>p {
     text-align:left;
     font-size: 2.5em;
     margin-bottom: 2.5rem;
+    
 }
 
 .card {
@@ -139,6 +150,7 @@ header>div>p {
     box-shadow: rgba(0, 0, 0, 0.65) 0px 15px 45px;
     transition: transform 0.8s ease-in-out;
     transform-style: preserve-3d;
+    
 }
 
 .card:hover {
@@ -165,6 +177,7 @@ header>div>p {
 .sideBack {
     transform: rotateY(180deg);
     display: flex;
+    
 }
 
 .sideBack p {
@@ -316,58 +329,59 @@ header>div>p {
     
     background-size:contain;
     background-repeat: no-repeat;
-    width: 35%;
-    height: 50em;
-    justify-self: center;
+    width: 800px;
+    height:800px;
+    justify-self:center;
+    position: relative;
 }
+
+
 
 .toulouse {
     background-color: red;
-    width: 6em;
-    height: 6em;
-    position: relative;
-    left: 71em;
-    bottom: 11em;
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    left: 44%;
+    top: 78%;
 }
-
-
 
 .rodez {
     background-color: green;
-    width: 6em;
-    height: 6em;
-    position: relative;
-    left: 73em;
-    bottom: 25em;
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    left: 50%;
+    top: 65%;
 }
 
 .saintQuentin {
     background-color: purple;
-    width: 6em;
-    height: 6em;
-    position: relative;
-    left: 77em;
-    bottom: 53em;
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    left: 58%;
+    top: 20%;
 }
 
 .lyon {
     background-color: orange;
-    width: 6em;
-    height: 6em;
-    position: relative;
-    left: 81em;
-    bottom: 42em;
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    left: 68%;
+    top: 52%;
 }
 
 .presentationExperience {
     background-color: var(--secondaryColor);
     border: solid var(--quaternaryColor) 2px;
-    width: 40rem;
+    border-radius: var(--borderRadius);
+    width: 35rem;
     height: auto;
     position: absolute;
-    right: 550px;
-    bottom: 150px;
-    border-radius: var(--borderRadius);
+    right: 8rem;
+    bottom: 1rem; 
     padding: 0.8rem;
 
 }
@@ -384,7 +398,7 @@ header>div>p {
     text-align: justify;
     position: relative;
     left: 110rem;
-    bottom: 60rem;    
+    bottom: 35rem;    
 }
 
 
@@ -477,4 +491,16 @@ button {
     border-radius: 10px;
     padding: 1em 2em;
     cursor: pointer;
+}
+
+
+
+/******* FOOTER *******/
+footer {
+    background-color: rgba(9, 9, 9, 0.693);;
+    color: var(--quinaryColor);
+    font-size: 2.3rem;
+    height: 20rem;
+
+    
 }
