@@ -324,31 +324,73 @@ header>div>p {
     
 }
 
+.mapExplicationContainer {
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;
+    position: relative;
+
+
+
+}
 .frenchMap {
     
-    background-image: url(pictures/frenchMap.png);
+    /* background-image: 
+        url(pictures/frenchMap.svg);
+        
+
     
     background-size:contain;
     background-repeat: no-repeat;
-    width: 800px;
-    height:800px;
+    width: 40rem;
+    height:40rem;
     justify-self:center;
-    position: relative;
+    position: relative; */
+    
+
 }
 
-
-
-.toulouse {
+svg {
+    background-color: none;
+    border: none;
+    fill: none;
+    stroke: var(--quaternaryColor);
+    stroke-width: 5px;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.9));
+    width: 50em;
     
+}
+
+#arrowMap1 {
+  
+  
+
+   position: absolute;
+   
+}
+
+#arrowMap2 {
+    
+    /* width: 20rem;
+    height: 2rem; */
+    /* transform: rotate(320deg); */
+    position: absolute;
+    top: 865px;
+    left: 538px;
+    
+ }
+
+#toulouse {
+    background-color: blueviolet;
     width: 10%;
     height: 10%;
-    position: absolute;
+    position: relative;
     left: 44%;
     top: 78%;
 }
 
 .rodez {
-    
+    background-color: red;
     width: 10%;
     height: 10%;
     position: absolute;
@@ -357,7 +399,7 @@ header>div>p {
 }
 
 .saintQuentin {
-    
+    background-color: orange;
     width: 10%;
     height: 10%;
     position: absolute;
@@ -366,7 +408,7 @@ header>div>p {
 }
 
 .lyon {
-    
+    background-color: green;
     width: 10%;
     height: 10%;
     position: absolute;
@@ -397,7 +439,7 @@ header>div>p {
     width: 30rem;
     font-size: 1.6rem;
     text-align: justify;
-    position: relative;
+    
     left: 110rem;
     bottom: 35rem;    
 }
