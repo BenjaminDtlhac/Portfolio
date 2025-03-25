@@ -36,6 +36,7 @@ header {
     padding: 2% 2%;
     align-items: center;
     border-bottom: 2.5px var(--tertiaryColor) solid;
+    box-shadow: 5px 5px 15px var(--quinaryColor);
 }
 
 body header :nth-child(2) {
@@ -47,9 +48,7 @@ body header :nth-child(2) {
 .scrollingText {
     width: 100%;                      /* largeur de la fenêtre */
     overflow: hidden; 
-    width: 100%;
-    margin-right: 8%;
-    
+    width: 100%;   
 }
 
 header>div>p {  
@@ -303,7 +302,6 @@ header>div>p {
     width: 50%;
     display: flex;
     justify-content: center;
-    
 }
 
 .cvContainer > img {
@@ -312,17 +310,16 @@ header>div>p {
 
 
 
-
 /******* Professional Career *******/
 .professionalCareer {
     height: 65rem;
+    margin-bottom: 15rem;
 }
 
 .professionalCareer h2{
     font-size: 4em;
     font-weight: normal;  
     margin: 8rem;
-    
 }
 
 .mapExplicationContainer {
@@ -330,25 +327,6 @@ header>div>p {
     justify-content: space-around;  
     align-items: center;
     position: relative;
-
-
-
-}
- {
-    
-    /* background-image: 
-        url(pictures/frenchMap.svg);
-        
-
-    
-    background-size:contain;
-    background-repeat: no-repeat;
-    width: 40rem;
-    height:40rem;
-    justify-self:center;
-    position: relative; */
-    
-
 }
 
 .frenchMap {
@@ -359,116 +337,71 @@ header>div>p {
     stroke-width: 5px;
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.9));
     width: 50em;
-   
-    
-}
-
-#arrowMap1 {
-  
-  
-
-   position: absolute;
-   
-}
-
-#arrowMap2 {
-    
-    /* width: 20rem;
-    height: 2rem; */
-    /* transform: rotate(320deg); */
-    position: absolute;
-    top: 865px;
-    left: 538px;
-    
- }
-
-#toulouse {
-    background-color: blueviolet;
-    width: 10%;
-    height: 10%;
-    position: relative;
-    left: 44%;
-    top: 78%;
-}
-
-.rodez {
-    background-color: red;
-    width: 10%;
-    height: 10%;
-    position: absolute;
-    left: 50%;
-    top: 65%;
-}
-
-.saintQuentin {
-    background-color: orange;
-    width: 10%;
-    height: 10%;
-    position: absolute;
-    left: 58%;
-    top: 20%;
-}
-
-.lyon {
-    background-color: green;
-    width: 10%;
-    height: 10%;
-    position: absolute;
-    left: 68%;
-    top: 52%;
+    height: 50rem;
 }
 
 .presentationExperience {
     background-color: var(--secondaryColor);
     border: solid var(--quaternaryColor) 2px;
     border-radius: var(--borderRadius);
-    width: 35rem;
+    width: 600px;
     height: auto;
     position: absolute;
-    right: 8rem;
+    right: 200px;
     bottom: 1rem; 
     padding: 0.8rem;
 
 }
-.presentationToulouse > h3 {
-    justify-self: center;
-    margin: 2rem 0;
-    font-size: 1.5rem;
 
+
+image {
+    pointer-events: none;
 }
-/* style="position: absolute; left: 1100px; top: 200px; font-size: 16px; display: none;"> */
 
-#presentationToulouse {
+
+.fiche {
     background-color: var(--secondaryColor);
     border: solid var(--quaternaryColor) 2px;
     border-radius: var(--borderRadius);
     width: 35rem;
-    height: auto;
+    height: 700px;
     position: absolute;
     right: 8rem;
-    bottom: 1rem; 
-    padding: 0.8rem;
+    bottom: 10.5rem; 
+    padding: 2.8rem;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 25px;
+}
+
+.fiche > h3 {
+    font-size: 1.5rem;
+    justify-self: center;
+}
+
+.fiche > h4 {
+    text-decoration: underline;
+    font-size: 1.3rem;
+}
+
+.fiche > h5 {
+    font-size: 1.2rem;
+}
+
+.fiche > h6 {
+    font-size: 1rem;
+}
+
+.fiche > p {
+    text-align: justify ;
 }
 
 .explication {
     width: 30rem;
     font-size: 1.6rem;
     text-align: justify;
-    
     left: 110rem;
-    bottom: 35rem;    
+    bottom: 35rem; 
+    z-index: -1;   
 }
-
-
-
-/* img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: drop-shadow(30px 10px 4px #4444dd);;
-} */
-
-
 
 
 /******* contact *******/
@@ -570,6 +503,8 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-top: black 2px solid;
+    
 
 }
 
