@@ -14,6 +14,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Righteous", sans-serif;
+    border: 3px solid black;
 }
 
 body {
@@ -25,12 +26,12 @@ h2 {
     border-top: #212121 solid 5px;
     border-left: black solid 5px;
     padding: 2%;
-    font-size: 4rem;
+    font-size: 1.8rem;
     font-weight: normal;  
     margin: 5%;
 }
 
-/******************************  HEADER  ******************************/
+/******************************  HEADER  ******************************/ 
 header {
     background-color: var(--secondaryColor);
     display: flex;
@@ -96,11 +97,13 @@ header>div>p {
     font-weight: normal;    
  }
 
- .namePresentation h2 {
+
+ .futurJob {
+    padding: none;
+    margin: none;  
     font-size: 4vw;
     font-weight: normal;  
-    border: none;  
-    
+    border: none; 
  }
 
 
@@ -110,14 +113,14 @@ header>div>p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10rem;
+    margin-top: 10%;
     
  }
  
  .presenetationMySelf > div{
     background-color: var(--quaternaryColor);
     border-radius: var(--borderRadius);
-    width: 70vw;
+    width: 90%;
     height: 120vh;
     display: flex;
     justify-content: center;
@@ -138,20 +141,16 @@ header>div>p {
     box-shadow: rgb(226, 205, 205,0.55) 0px 5px 20px;
 }
 
-
-
-
-
 .card {
     background-color: var(--quinaryColor);    
-    width: 80%;
-    height: 80%;
-    padding: 5%;
+    width: 90%;
+    height: 90%;
     position:absolute;
     box-shadow: rgba(0, 0, 0, 0.65) 0px 15px 45px;
     transition: transform 0.8s ease-in-out;
     transform-style: preserve-3d;
     border-radius: var(--borderRadius);
+   
     
 }
 
@@ -169,7 +168,7 @@ header>div>p {
 
 /**** SIDEFRONT ****/
 .sideFront {
-    z-index: 1;
+    padding: 5%;
 }
 
 .sideFront h3 {
@@ -180,7 +179,7 @@ header>div>p {
 }
 
 .sideFront p {
-    width: 85%;
+    width: 100%;
     text-align: justify;
     font-size: clamp(1rem, 3vw, 1.5rem);
 }
@@ -193,26 +192,19 @@ header>div>p {
 .sideBack {
     transform: rotateY(180deg);
     display: flex;
-    
+    align-items: center;
 }
 
 .sideBack p {
-    width: 50%;
+    height: 100%;
     text-align: justify;
-    position:relative;
-    left: 6rem;
-    margin-left: 4rem;
+    padding: 5%;
     font-size: 1rem;
-    letter-spacing: 0.1rem;
-
-}
+   }
 
 .sideBack img {
-    width: 30%;
-    height: 50%;
-    position:relative;
-    left: 6rem;
-    top: -1rem;
+    height: 30%;
+    margin: 4%;
     border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;
 }
@@ -276,7 +268,7 @@ header>div>p {
 /******* Professional Career *******/
 .professionalCareer {
  
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 
@@ -315,7 +307,6 @@ header>div>p {
     right: 200px;
     bottom: 1rem; 
     padding: 0.8rem;
-
 }
 
 
@@ -329,10 +320,10 @@ image {
     border: solid var(--quaternaryColor) 2px;
     border-radius: var(--borderRadius);
     width: 35rem;
-    height: 700px;
+    height: 750px;
     position: absolute;
     right: 8rem;
-    bottom: 10.5rem; 
+    bottom: 1.5rem; 
     padding: 2.8rem;
     box-shadow: rgba(0, 0, 0, 0.75) 0px 5px 25px;
 }
@@ -378,10 +369,10 @@ image {
 }
 
 form {
-    height: 60em;
-    width: 50%;
+    height: 55em;
+    
     background-color: var(--secondaryColor);
-    margin-bottom: 10rem;
+    margin: 5%;
     border-radius: var(--borderRadius);
     padding: 2rem;
     border: solid var(--quaternaryColor) 45px;
@@ -432,7 +423,7 @@ input {
 }
 
 .messageForm {
-    height: 10rem;
+    height: 5rem;
     margin-top: 1.2rem;
     border-radius: 5px;    
 }
@@ -443,17 +434,16 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5.5rem;
+    margin-top: 1.5rem;
 }
 
 button {
     background-color: var(--quaternaryColor);
     color: var(--quinaryColor);
     border-radius: 10px;
-    padding: 1em 2em;
+    padding: 2% 5%;
     cursor: pointer;
     font-size: 1.5rem;
-    margin-bottom: 2.5rem;
 }
 
 
@@ -498,6 +488,7 @@ footer :first-child{
     padding: 2rem;
     border-radius: var(--borderRadius);
     width: 25%;
+    text-align: center;
 }
 
 .topPage > a {
@@ -508,10 +499,11 @@ footer :first-child{
 
 /* Partie bouton */
 
-footer > div > button {
+.on, .off {
     background-color: black;
     color: rgb(77, 77, 77);
-    
+    margin: 1.2rem;
+    padding: 1em 2em;
 }
 
 
@@ -522,7 +514,7 @@ footer > div > button {
 
 /*** MOBILE PHONE ***/
 
-@media (max-width: 480px) {
+@media (max-width: 517px) {
     body {
         background-color: lightblue;
     }
@@ -534,6 +526,19 @@ footer > div > button {
 
     form {
         width: 90%;
+        border: 10px var(--quaternaryColor) solid;
+    }
+
+     /** FOOTER **/
+  
+
+     .purpleLight {
+        display: none;
+    }
+
+    .topPage {
+        font-size: 1.2rem;
+        width: 30%;
     }
 
 
@@ -553,7 +558,7 @@ footer > div > button {
 
 
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 518px) and (max-width: 768px) {
     body {
         background-color: lightgreen;
     }
@@ -575,7 +580,7 @@ footer > div > button {
 
 
 
-
+    
 
 
 
