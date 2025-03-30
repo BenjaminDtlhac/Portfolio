@@ -18,13 +18,16 @@
 
 body {
     background-color: var(--primaryColor);
+    
 }
 
 h2 {
     border-top: #212121 solid 5px;
     border-left: black solid 5px;
-    padding: 0.2em;
-    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 2%;
+    font-size: 4rem;
+    font-weight: normal;  
+    margin: 5%;
 }
 
 /******************************  HEADER  ******************************/
@@ -32,11 +35,15 @@ header {
     background-color: var(--secondaryColor);
     display: flex;
     height: 6rem;
+    width: 100%;
     box-sizing: border-box;
     padding: 2% 2%;
     align-items: center;
     border-bottom: 2.5px var(--tertiaryColor) solid;
     box-shadow: 5px 5px 15px var(--quinaryColor);
+    justify-content: space-between;
+    align-items: center;
+    
 }
 
 body header :nth-child(2) {
@@ -77,20 +84,20 @@ header>div>p {
   /******* Name & job *******/
 
  .namePresentation {
-    margin: 12rem;
+    margin: 10%;
     display: flex;
     justify-content: center;
     flex-direction: column;
  }
 
  h1 {
-    font-size: 8em;
+    font-size: 7vw;
     text-transform: uppercase;
     font-weight: normal;    
  }
 
  .namePresentation h2 {
-    font-size: 4rem;
+    font-size: 4vw;
     font-weight: normal;  
     border: none;  
     
@@ -110,15 +117,15 @@ header>div>p {
  .presenetationMySelf > div{
     background-color: var(--quaternaryColor);
     border-radius: var(--borderRadius);
-    width: 70%;
-    height: 70em;
+    width: 70vw;
+    height: 120vh;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 1) 0px 5px 15px;
  }
 
-.presenetationMySelf > div > div {
+.cardContainer {
     background-color: var(--tertiaryColor);    
     border-radius: var(--borderRadius);
     width: 90%;
@@ -133,19 +140,13 @@ header>div>p {
 
 
 
-.presenetationMySelf h3 {
-    text-transform: uppercase;
-    text-align:left;
-    font-size: 2.5em;
-    margin-bottom: 2.5rem;
-    
-}
+
 
 .card {
     background-color: var(--quinaryColor);    
-    width: 50rem;
-    height: 40rem;
-    padding: 3.5em;
+    width: 80%;
+    height: 80%;
+    padding: 5%;
     position:absolute;
     box-shadow: rgba(0, 0, 0, 0.65) 0px 15px 45px;
     transition: transform 0.8s ease-in-out;
@@ -165,15 +166,29 @@ header>div>p {
     backface-visibility: hidden;
 }
 
+
+/**** SIDEFRONT ****/
 .sideFront {
     z-index: 1;
 }
 
-.sideFont p {
+.sideFront h3 {
+    text-transform: uppercase;
+    text-align:left;
+    font-size: 2.5vw;
+    margin-bottom: 2.5rem;
+}
+
+.sideFront p {
     width: 85%;
     text-align: justify;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
 }
+
+
+
+
+/**** SIDEBACK ****/
 
 .sideBack {
     transform: rotateY(180deg);
@@ -182,7 +197,7 @@ header>div>p {
 }
 
 .sideBack p {
-    width: 25rem;
+    width: 50%;
     text-align: justify;
     position:relative;
     left: 6rem;
@@ -193,8 +208,8 @@ header>div>p {
 }
 
 .sideBack img {
-    width: 15rem;
-    height: 20rem;
+    width: 30%;
+    height: 50%;
     position:relative;
     left: 6rem;
     top: -1rem;
@@ -205,122 +220,65 @@ header>div>p {
 
 /******* Skills in progress *******/
 
-
-
-.skills h2{
-    font-size: 4em;
-    font-weight: normal;  
-    margin: 8rem;
-}
-
-.skills > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .skillsContainer {
-    width: 50%;
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
+    justify-self: center;
 }
 
-.skills > div > div > .js {
+.js, .css, .symfony, .html, .php, .wordpress, .mysql {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    margin: 5%;
+
+}
+
+ .js {
     background-image: url(pictures/Group\ 18.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 200px;
-    margin: 50px;
+    
 }
 
-.skills > div > div > .css {
+.css {
     background-image: url(pictures/css.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 200px;
-    margin: 50px;
+   
 }
 
-.skills >div > div > .symfony {
+.symfony {
     background-image: url(pictures/symfony.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 200px;
-    margin: 50px;
+   
 }
 
-.skills > div > div > .html {
+.html {
     background-image: url(pictures/html.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 200px;
-    margin: 50px;
+    
 }
 
-.skills > div > div > .angular {
-    background-image: url(pictures/angular.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 200px;
-    margin: 50px;
-}
 
-.skills > div > div > .php {
+.php {
     background-image: url(pictures/php.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 200px;
-    margin: 50px;
+    
 }
 
-.skills > div > div > .wordpress {
+.wordpress {
     background-image: url(pictures/wordpress.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 200px;
-    margin: 50px;
+    
 }
 
-.skills > div > div > .mysql {
+.mysql {
     background-image: url(pictures/mysql.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 200px;
-    margin: 50px;
+    
 }
-
-.cvContainer {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-}
-
-.cvContainer > img {
-    width: 60%;    
-}
-
 
 
 /******* Professional Career *******/
 .professionalCareer {
-    height: 65rem;
-    margin-bottom: 15rem;
+ 
+    margin-bottom: 10%;
 }
 
-.professionalCareer h2{
-    font-size: 4em;
-    font-weight: normal;  
-    margin: 8rem;
-}
 
 .mapExplicationContainer {
     display: flex;
@@ -328,6 +286,13 @@ header>div>p {
     align-items: center;
     position: relative;
 }
+
+
+/* .mapExplicationContainer > div {
+    width: 60%;
+    height: 80%;
+} */
+
 
 .frenchMap {
     background-color: none;
@@ -399,19 +364,13 @@ image {
     font-size: 1.6rem;
     text-align: justify;
     left: 110rem;
-    bottom: 35rem; 
-    z-index: -1;   
+    bottom: 35rem;  
 }
 
 
 /******* contact *******/
-.contact h2{
-    font-size: 4em;
-    font-weight: normal;  
-    margin: 8rem;
-}
-
 /* Presantation Général */
+
 .contact > div {
     display: flex;
     justify-content: center;
@@ -442,6 +401,7 @@ form > p {
 .indentificationContact, .coordonnees {
     display: flex;
     justify-content: space-between;
+    
 }
 
 .names, .entreprise, .contactPersonTel, .contactPersonEmail {
@@ -449,7 +409,17 @@ form > p {
     flex-direction: column;
     margin-top: 1.5rem;
     font-size: 1.3rem;
+    width: 40%;
 }
+
+/* Input */
+input {
+    width: 100%;
+    height: 2.7rem;
+    margin-top: 0.8rem ;
+    border-radius: 5px;
+}
+
 
 /* Message */
 .message {
@@ -467,13 +437,7 @@ form > p {
     border-radius: 5px;    
 }
 
-/* Input */
- input {
-    width: 22rem;
-    height: 2.7rem;
-    margin-top: 0.8rem ;
-    border-radius: 5px;
-}
+
 /* button style */
 .btn {
     display: flex;
@@ -533,11 +497,13 @@ footer :first-child{
     background-color: black;
     padding: 2rem;
     border-radius: var(--borderRadius);
+    width: 25%;
 }
 
 .topPage > a {
     text-decoration: none;
     color: rgb(77, 77, 77);
+    
 }
 
 /* Partie bouton */
@@ -545,8 +511,113 @@ footer :first-child{
 footer > div > button {
     background-color: black;
     color: rgb(77, 77, 77);
+    
 }
 
 
 
+
+
+/***************************** RESPONSIVE ***************************/
+
+/*** MOBILE PHONE ***/
+
+@media (max-width: 480px) {
+    body {
+        background-color: lightblue;
+    }
+
+    .mapExplicationContainer {
+        flex-direction: column;
+    }
+
+
+    form {
+        width: 90%;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/*** TABLET ***/
+
+
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        background-color: lightgreen;
+    }
+
+
+    /******* Who i am ? *******/
+
+    .presenetationMySelf > div {
+        width: 90%;
+    }
+
+    .sideBack {
+        flex-direction: column;
+    }
+
+    .sideBack > img {
+        height: 20%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+  /** PRO CAREER **/
+
+  .professionalCareer {
+    margin: 2rem;
+  }
+
+    .mapExplicationContainer {
+        flex-direction: column-reverse;
+        
+    }
+
+    .frenchMap  {
+        height: 30em;
+        margin-top: 2rem ;
+    }
+
+
+    /** CONTACT **/
+    
+   
+
+    form {
+        width: 90%;
+    }
+
+    /** FOOTER **/
+  
+
+    .purpleLight {
+        display: none;
+    }
+
+    .topPage {
+        width: 50%;
+    }
+
+}
 
