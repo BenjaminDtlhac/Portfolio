@@ -19,9 +19,10 @@ function createPresentation() {
    
 
     divPresentation.innerHTML = `
-                        <h3> TOULOUSE (31) - 2009/2018</h3>
+                        <svg class="closeArrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g data-name="Layer 44" id="Layer_44"><path d="M40.61,15.38l-2.83-2.83a.51.51,0,0,0-.71,0L18,31.65a.48.48,0,0,0,0,.7l19.09,19.1a.52.52,0,0,0,.71,0l2.83-2.83a.51.51,0,0,0,0-.71L24.7,32,40.61,16.09A.51.51,0,0,0,40.61,15.38Z"/><path d="M32,3.5A28.5,28.5,0,1,0,60.5,32,28.54,28.54,0,0,0,32,3.5Zm0,52A23.5,23.5,0,1,1,55.5,32,23.52,23.52,0,0,1,32,55.5Z"/></g></svg>
+                        <h3> TOULOUSE (31)</h3>
                         
-                        <h3></h3><br>
+                        <h3>2009/2018</h3><br>
 
                         <h4>Expériences Professionnelles</h4><br>
 
@@ -55,7 +56,8 @@ function createPresentation() {
     `;
 
     content.append(divPresentation);
-    
+    const closeArrow = divPresentation.querySelector(".closeArrow");
+    closeArrow.addEventListener("click", deletePresentation);
 }
 
 
@@ -65,8 +67,7 @@ function deletePresentation() {
     divToulouse.remove();
 }
 
-circleToulouse.addEventListener('mouseenter', createPresentation);
-circleToulouse.addEventListener('mouseleave', deletePresentation);
+circleToulouse.addEventListener('click', createPresentation);
 
 
 /****************** RODEZ ***********************/
@@ -79,7 +80,9 @@ function createPresentationR() {
     divPresentationR.classList.add('rodez', 'divRodez', 'fiche');
 
     divPresentationR.innerHTML = `
-                        <h3> Laguiole (12) - 2022/2023</h3>
+                        <svg class="closeArrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g data-name="Layer 44" id="Layer_44"><path d="M40.61,15.38l-2.83-2.83a.51.51,0,0,0-.71,0L18,31.65a.48.48,0,0,0,0,.7l19.09,19.1a.52.52,0,0,0,.71,0l2.83-2.83a.51.51,0,0,0,0-.71L24.7,32,40.61,16.09A.51.51,0,0,0,40.61,15.38Z"/><path d="M32,3.5A28.5,28.5,0,1,0,60.5,32,28.54,28.54,0,0,0,32,3.5Zm0,52A23.5,23.5,0,1,1,55.5,32,23.52,23.52,0,0,1,32,55.5Z"/></g></svg>
+                        <h3> Laguiole (12)</h3><br>
+                        <h3>2022/2023</h3>
                         <br><br><br>
                         <h4>Expériences Professionnelles</h4><br><br>
 
@@ -100,6 +103,8 @@ function createPresentationR() {
     `;
 
     content.append(divPresentationR);
+    const closeArrow = divPresentationR.querySelector(".closeArrow");
+    closeArrow.addEventListener("click", deletePresentationR);
 }
 
 function deletePresentationR() {
@@ -108,12 +113,14 @@ function deletePresentationR() {
     divRodez.remove();
 }
 
-circleRodez.addEventListener("mouseover", createPresentationR);
-circleRodez.addEventListener('mouseleave', deletePresentationR);
+circleRodez.addEventListener("click", createPresentationR);
+
 
 
 /****************** SAINT QUENTIN ***********************/
 const circleSaintQuentin = document.querySelector("#saintQuentin");
+
+
 
 function createPresentationSQ() {
     if (document.querySelector('.divSaintQuentin')) return;
@@ -122,8 +129,9 @@ function createPresentationSQ() {
     divPresentationSQ.classList.add('saintQuentin', 'divSaintQuentin', 'fiche');
 
     divPresentationSQ.innerHTML = `
-                        <h3> SAINT-QUENTIN (02) - 2023/2024</h3>
-                        <h3></h3><br><br><br>
+                        <svg class="closeArrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g data-name="Layer 44" id="Layer_44"><path d="M40.61,15.38l-2.83-2.83a.51.51,0,0,0-.71,0L18,31.65a.48.48,0,0,0,0,.7l19.09,19.1a.52.52,0,0,0,.71,0l2.83-2.83a.51.51,0,0,0,0-.71L24.7,32,40.61,16.09A.51.51,0,0,0,40.61,15.38Z"/><path d="M32,3.5A28.5,28.5,0,1,0,60.5,32,28.54,28.54,0,0,0,32,3.5Zm0,52A23.5,23.5,0,1,1,55.5,32,23.52,23.52,0,0,1,32,55.5Z"/></g></svg>
+                        <h3> SAINT-QUENTIN (02)</h3>
+                        <h3>2023/2024</h3><br><br><br>
                         <h4>Expériences Professionnelles</h4><br><br>
 
                         <h5>Direction Départementale des Finances Publiques (02)</h5>
@@ -139,18 +147,21 @@ function createPresentationSQ() {
                             - Personnalisée en fonction des besoins des collectivités : analyses financières,
                             accompagnement dans les projets d'investissement
     `;
+    
 
     content.append(divPresentationSQ);
+    const closeArrow = divPresentationSQ.querySelector(".closeArrow");
+    closeArrow.addEventListener("click", deletePresentationSQ);
 }
-
 function deletePresentationSQ() {
-
+    
     const divSaintQuentin = document.querySelector('.divSaintQuentin');
     divSaintQuentin.remove();
 }
 
-circleSaintQuentin.addEventListener("mouseover", createPresentationSQ);
-circleSaintQuentin.addEventListener('mouseleave', deletePresentationSQ);
+circleSaintQuentin.addEventListener("click", createPresentationSQ);
+
+
 
 
 
@@ -168,8 +179,10 @@ function createPresentationL() {
     divPresentationL.classList.add('lyon', 'divLyon', 'fiche');
 
     divPresentationL.innerHTML = `
-                        <h3> LYON (69) - 2024/2025</h3>
-                       <br>
+                        <svg class="closeArrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g data-name="Layer 44" id="Layer_44"><path d="M40.61,15.38l-2.83-2.83a.51.51,0,0,0-.71,0L18,31.65a.48.48,0,0,0,0,.7l19.09,19.1a.52.52,0,0,0,.71,0l2.83-2.83a.51.51,0,0,0,0-.71L24.7,32,40.61,16.09A.51.51,0,0,0,40.61,15.38Z"/><path d="M32,3.5A28.5,28.5,0,1,0,60.5,32,28.54,28.54,0,0,0,32,3.5Zm0,52A23.5,23.5,0,1,1,55.5,32,23.52,23.52,0,0,1,32,55.5Z"/></g></svg>    
+                        <h3> LYON (69)</h3><br>
+                        <h3>2024/2025</h3>
+                        <br>
                         <h4>En cours de formation</h4><br>
 
                         <h6>Développeur Web et Web Mobile </h6><br>
@@ -191,6 +204,8 @@ function createPresentationL() {
     `;
 
     content.append(divPresentationL);
+    const closeArrow = divPresentationL.querySelector(".closeArrow");
+    closeArrow.addEventListener("click", deletePresentationL);
 }
 
 function deletePresentationL() {
@@ -199,8 +214,8 @@ function deletePresentationL() {
     divLyon.remove();
 }
 
-circleLyon.addEventListener("mouseover", createPresentationL);
-circleLyon.addEventListener('mouseleave', deletePresentationL);
+circleLyon.addEventListener("click", createPresentationL);
+;
 
 
 
@@ -259,3 +274,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btnOn) btnOn.addEventListener("click", lightToOn);
     if (btnOff) btnOff.addEventListener("click", lightToOff);
 });
+
+
+
+
