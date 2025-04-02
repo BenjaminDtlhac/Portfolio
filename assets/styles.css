@@ -646,8 +646,6 @@ footer :first-child {
 }
 
 
-
-
     /** PRO CAREER **/
 
 
@@ -660,11 +658,9 @@ footer :first-child {
         margin: 5px;
     }
 
-
-
-
-
-
+    .frenchMap {
+        height: 50%;
+    }
 
 
 
