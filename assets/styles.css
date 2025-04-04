@@ -191,15 +191,13 @@ h1 {
 }
 
 .sideBack p {
-    height: 100%;
     text-align: justify;
     padding: 5%;
-    font-size: clamp(1rem, 2vw, 2rem);
+    font-size: 1rem;
 }
 
 .sideBack img {
-    height: 32%;
-    margin: 4%;
+    height: 30%;
     border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;
 }
@@ -561,7 +559,7 @@ footer :first-child {
 .presenetationMySelf>div {
     width: 90%;
     margin-bottom: 1.3rem;
-    height: 90vh;
+    height: 110vh;
 }
 
 .sideFront>h3 {
@@ -584,12 +582,11 @@ footer :first-child {
 }
 
 .sideBack p {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
 }
 
 .sideBack img {
     height: 10%;
-    margin: 4%;
     border-radius: 50px;
 }
 
@@ -721,6 +718,10 @@ footer :first-child {
 
     .sideBack>img {
         height: 20%;
+    }
+
+    .sideBack > p{
+        font-size: 0.8rem;
     }
 
 
