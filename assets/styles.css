@@ -14,7 +14,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Righteous", sans-serif;
-    border: 3px solid black;
 }
 
 body {
@@ -34,17 +33,10 @@ h2 {
 /******************************  HEADER  ******************************/
 header {
     background-color: var(--secondaryColor);
-    display: flex;
-    height: 6rem;
     width: 100%;
-    box-sizing: border-box;
     padding: 2% 2%;
-    align-items: center;
     border-bottom: 2.5px var(--tertiaryColor) solid;
     box-shadow: 5px 5px 15px var(--quinaryColor);
-    justify-content: space-between;
-    align-items: center;
-
 }
 
 body header :nth-child(2) {
@@ -53,16 +45,14 @@ body header :nth-child(2) {
 }
 
 /******* HEADER SCROLLING TEXT *******/
+
 .scrollingText {
-    width: 100%;
-    /* largeur de la fenêtre */
     overflow: hidden;
-    width: 100%;
 }
 
 header>div>p {
     padding-left: 2em;
-    width: 100%;
+    width: 182%;
     animation-name: defilement-rtl;
     /* référence à la règle @keyframes mise en oeuvre */
     animation-duration: 25s;
@@ -70,11 +60,9 @@ header>div>p {
     animation-iteration-count: infinite;
     /* boucle continue */
     animation-timing-function: linear;
-    /* pas vraiment utile ici */
     font-size: 40px;
-    color: var(--quaternaryColor);
     white-space: nowrap;
-    /* pas de retour à la ligne */
+    color: var(--quaternaryColor);
 }
 
 @keyframes defilement-rtl {
@@ -101,18 +89,15 @@ header>div>p {
 }
 
 h1 {
-    font-size: 7vw;
+    font-size: 8rem;
     text-transform: uppercase;
     font-weight: normal;
 }
 
 
 .futurJob {
-    padding: none;
-    margin: none;
-    font-size: 4vw;
+    font-size: 4rem;
     font-weight: normal;
-    border: none;
 }
 
 
@@ -159,8 +144,6 @@ h1 {
     transition: transform 0.8s ease-in-out;
     transform-style: preserve-3d;
     border-radius: var(--borderRadius);
-
-
 }
 
 .card:hover {
@@ -188,11 +171,13 @@ h1 {
 }
 
 .sideFront p {
-    width: 100%;
     text-align: justify;
-    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-size: clamp(1.1rem, 2vw, 2rem);
 }
 
+.sideFront>button {
+    display: none;
+}
 
 
 
@@ -202,17 +187,18 @@ h1 {
     transform: rotateY(180deg);
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .sideBack p {
     height: 100%;
     text-align: justify;
     padding: 5%;
-    font-size: 1rem;
+    font-size: clamp(1rem, 2vw, 2rem);
 }
 
 .sideBack img {
-    height: 30%;
+    height: 32%;
     margin: 4%;
     border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;
@@ -220,6 +206,10 @@ h1 {
 
 .card.flipped {
     transform: rotateY(180deg);
+}
+
+.sideBack > button {
+    display: none;
 }
 
 
@@ -247,7 +237,6 @@ h1 {
     width: 200px;
     height: 200px;
     margin: 3%;
-
 }
 
 .figma {
@@ -264,47 +253,40 @@ h1 {
 
 .js {
     background-image: url(pictures/Group\ 18.png);
-
 }
 
 .css {
     background-image: url(pictures/css.png);
-
 }
 
 .symfony {
     background-image: url(pictures/symfony.png);
-
 }
 
 .html {
     background-image: url(pictures/html.png);
-
 }
 
 
 .php {
     background-image: url(pictures/php.png);
-
 }
 
 .wordpress {
     background-image: url(pictures/wordpress.png);
-
 }
 
 .mysql {
     background-image: url(pictures/mysql.png);
-
 }
+
 
 
 /******* Professional Career *******/
 .professionalCareer {
-
+    margin: 2rem;
     margin-bottom: 5%;
 }
-
 
 .mapExplicationContainer {
     display: flex;
@@ -314,13 +296,6 @@ h1 {
     position: relative;
     height: auto;
 }
-
-
-/* .mapExplicationContainer > div {
-    width: 60%;
-    height: 80%;
-} */
-
 
 .frenchMap {
     background-color: none;
@@ -339,17 +314,14 @@ h1 {
     border-radius: var(--borderRadius);
     width: 600px;
     height: auto;
-    /* position: absolute; */
     right: 200px;
     bottom: 1rem;
     padding: 0.8rem;
 }
 
-
 image {
     pointer-events: none;
 }
-
 
 .fiche {
     background-color: var(--secondaryColor);
@@ -384,10 +356,8 @@ image {
 }
 
 .explication {
-    font-size: 1.6rem;
+    font-size: clamp(1.1rem, 2vw, 2rem);
     text-align: justify;
-    left: 110rem;
-    bottom: 35rem;
 }
 
 .divRodez>svg {
@@ -424,7 +394,7 @@ image {
 }
 
 
-/******* contact *******/
+/********* contact *********/
 /* Presantation Général */
 
 .contact>div {
@@ -435,7 +405,6 @@ image {
 
 form {
     height: 55em;
-
     background-color: var(--secondaryColor);
     margin: 5%;
     border-radius: var(--borderRadius);
@@ -458,7 +427,6 @@ form>p {
 .coordonnees {
     display: flex;
     justify-content: space-between;
-
 }
 
 .names,
@@ -479,7 +447,6 @@ input {
     margin-top: 0.8rem;
     border-radius: 5px;
 }
-
 
 /* Message */
 .message {
@@ -516,7 +483,6 @@ button {
 }
 
 
-
 /******* FOOTER *******/
 footer {
     background-color: rgba(9, 9, 9, 0.693);
@@ -528,8 +494,6 @@ footer {
     justify-content: space-around;
     align-items: center;
     border-top: black 2px solid;
-
-
 }
 
 /* Partie icones */
@@ -537,10 +501,7 @@ footer :first-child {
     display: flex;
     flex-direction: column;
     list-style: none;
-
 }
-
-
 
 .icon {
     width: 100px;
@@ -549,12 +510,10 @@ footer :first-child {
     margin: 1rem;
     border: none;
     border-radius: var(--borderRadius);
-
 }
 
 /* Partie retour en haut de page */
 .topPage {
-
     background-color: black;
     padding: 2rem;
     border-radius: var(--borderRadius);
@@ -565,7 +524,6 @@ footer :first-child {
 .topPage>a {
     text-decoration: none;
     color: rgb(77, 77, 77);
-
 }
 
 /* Partie bouton */
@@ -580,23 +538,36 @@ footer :first-child {
 
 
 
-
-
 /***************************** RESPONSIVE ***************************/
 
 /*** MOBILE PHONE ***/
 
 @media (max-width: 517px) {
-    body {
-        background-color: lightblue;
+
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    .futurJob {
+        font-size: 1.5rem;
     }
 
     .mapExplicationContainer {
         justify-content: center;
-
     }
 
 /******* Who i am ? *******/
+
+.presenetationMySelf>div {
+    width: 90%;
+    margin-bottom: 1.3rem;
+    height: 60vh;
+}
+
+.sideFront>h3 {
+    font-size: 1.5rem;
+}
+
 .cardContainer {
     height: 95%;
     display: flex;
@@ -610,7 +581,6 @@ footer :first-child {
 .sideBack {
     display: flex;
     flex-direction: column;
-    
 }
 
 .sideBack p {
@@ -624,7 +594,29 @@ footer :first-child {
 }
 
 
+/*** Button ***/
 
+.sideBack>button {
+    display: flex;
+}
+
+.sideFront>button {
+    display: flex;
+}
+
+.btnPresentation {
+    width: 40%;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    font-size: 1rem;
+}
+
+.sideFront > button {
+    left : 35%
+}
 
 
 /******* Hard Skills*******/
@@ -638,22 +630,18 @@ footer :first-child {
 .github,
 .vueJs,
 .figma {
-   
     width: 100px;
     height: 100px;
     margin: 3%;
-
 }
 
 
     /** PRO CAREER **/
-
-
     .fiche {
         width: 95%;
-        /* padding-top: 15%; */
-
+        padding-top: 20%;
     }
+
     .explication {
         margin: 5px;
     }
@@ -661,8 +649,6 @@ footer :first-child {
     .frenchMap {
         height: 50%;
     }
-
-
 
     /** FOOTER **/
 
@@ -685,7 +671,6 @@ footer :first-child {
         width: 100%;
     }
 
-
     .purpleLight {
         display: none;
     }
@@ -695,8 +680,6 @@ footer :first-child {
         width: 30%;
         padding: 0.5rem;
     }
-
-
 }
 
 
@@ -704,34 +687,35 @@ footer :first-child {
 
 
 
-
-
-
-
 /*** TABLET ***/
-
-
-
-
 @media (min-width: 518px) and (max-width: 768px) {
-    body {
-        background-color: lightgreen;
+    
+    h1 {
+        font-size: 4rem;
+    }
+
+    .futurJob {
+        font-size: 2rem;
     }
 
 
     /******* Who i am ? *******/
 
+    .sideFront>h3 {
+        font-size: 1.5rem;
+    }
+
     .presenetationMySelf>div {
         width: 90%;
         margin-bottom: 1.3rem;
-
+        height: 90vh;
     }
 
     .cardContainer {
         height: 95%;
     }
 
-    .sideBack {
+    .sideBack, .sideFront {
         flex-direction: column;
     }
 
@@ -740,13 +724,27 @@ footer :first-child {
     }
 
 
+    /*** Button ***/
+    .sideBack>button {
+        display: flex;
+    }
 
+    .sideFront>button {
+        display: flex;
+    }
 
+    .btnPresentation {
+        width: 30%;
+        display: flex;
+        justify-self: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+    }
 
-
-
-
-
+    .sideFront > button {
+        left : 35%
+    }
 
 
     /** PRO CAREER **/
@@ -757,7 +755,6 @@ footer :first-child {
 
     .mapExplicationContainer {
         flex-direction: column-reverse;
-
     }
 
     .frenchMap {
@@ -772,20 +769,16 @@ footer :first-child {
 
     /** CONTACT **/
 
-
-
     form {
         width: 90%;
         height: 80%;
         border: 15px var(--quaternaryColor) solid;
-
     }
 
     .indentificationContact,
     .coordonnees {
         display: flex;
         flex-direction: column;
-
     }
 
     .names,
@@ -798,7 +791,6 @@ footer :first-child {
 
     /** FOOTER **/
 
-
     .purpleLight {
         display: none;
     }
@@ -806,5 +798,4 @@ footer :first-child {
     .topPage {
         width: 50%;
     }
-
 }

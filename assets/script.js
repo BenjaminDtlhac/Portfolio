@@ -1,8 +1,33 @@
-// // Je veux créer un add event listener et lorsque le curseur passe dessus la div, elle affiche un nouveau document qui présentera ce que j'y ai fait
 
-// // 1. j'appelle les divs
-// // 2. je crée le addEventListener lorsque le curseur passe dessus
-// // 3. je crée un document qui présente ce que j'ai fait
+/******************* CARD RETURN *******************/
+
+const btnGo = document.querySelector(".btnGo");
+const btnRetour = document.querySelector(".btnRetour");
+const card = document.querySelector(".card");
+
+
+function turnCardGo (){
+    card.style.transform = "rotateY(180deg)";
+}
+
+function turnCardReturn () {
+    card.style.transform = "rotateY(360deg)";
+}
+
+
+btnGo.addEventListener('click', turnCardGo);
+btnRetour.addEventListener('click', turnCardReturn);
+
+
+
+
+/*******************************************************************************************/
+/*******************************************************************************************/
+/*******************************************************************************************/
+
+
+
+/******************* FRENCH MAP INTERACTIVE *******************/
 
 const circleToulouse = document.querySelector("#toulouse");
 const content = document.querySelector('.mapExplicationContainer');
@@ -20,7 +45,7 @@ function createPresentation() {
 
     divPresentation.innerHTML = `
                         <svg class="closeArrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g data-name="Layer 44" id="Layer_44"><path d="M40.61,15.38l-2.83-2.83a.51.51,0,0,0-.71,0L18,31.65a.48.48,0,0,0,0,.7l19.09,19.1a.52.52,0,0,0,.71,0l2.83-2.83a.51.51,0,0,0,0-.71L24.7,32,40.61,16.09A.51.51,0,0,0,40.61,15.38Z"/><path d="M32,3.5A28.5,28.5,0,1,0,60.5,32,28.54,28.54,0,0,0,32,3.5Zm0,52A23.5,23.5,0,1,1,55.5,32,23.52,23.52,0,0,1,32,55.5Z"/></g></svg>
-                        <h3> TOULOUSE (31)</h3>
+                        <h3> TOULOUSE </h3>
                         
                         <h3>2009/2018</h3><br>
 
@@ -81,7 +106,7 @@ function createPresentationR() {
 
     divPresentationR.innerHTML = `
                         <svg class="closeArrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g data-name="Layer 44" id="Layer_44"><path d="M40.61,15.38l-2.83-2.83a.51.51,0,0,0-.71,0L18,31.65a.48.48,0,0,0,0,.7l19.09,19.1a.52.52,0,0,0,.71,0l2.83-2.83a.51.51,0,0,0,0-.71L24.7,32,40.61,16.09A.51.51,0,0,0,40.61,15.38Z"/><path d="M32,3.5A28.5,28.5,0,1,0,60.5,32,28.54,28.54,0,0,0,32,3.5Zm0,52A23.5,23.5,0,1,1,55.5,32,23.52,23.52,0,0,1,32,55.5Z"/></g></svg>
-                        <h3> Laguiole (12)</h3><br>
+                        <h3> Laguiole </h3><br>
                         <h3>2022/2023</h3>
                         <br><br><br>
                         <h4>Expériences Professionnelles</h4><br><br>
@@ -130,7 +155,7 @@ function createPresentationSQ() {
 
     divPresentationSQ.innerHTML = `
                         <svg class="closeArrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g data-name="Layer 44" id="Layer_44"><path d="M40.61,15.38l-2.83-2.83a.51.51,0,0,0-.71,0L18,31.65a.48.48,0,0,0,0,.7l19.09,19.1a.52.52,0,0,0,.71,0l2.83-2.83a.51.51,0,0,0,0-.71L24.7,32,40.61,16.09A.51.51,0,0,0,40.61,15.38Z"/><path d="M32,3.5A28.5,28.5,0,1,0,60.5,32,28.54,28.54,0,0,0,32,3.5Zm0,52A23.5,23.5,0,1,1,55.5,32,23.52,23.52,0,0,1,32,55.5Z"/></g></svg>
-                        <h3> SAINT-QUENTIN (02)</h3>
+                        <h3> SAINT-QUENTIN</h3>
                         <h3>2023/2024</h3><br><br><br>
                         <h4>Expériences Professionnelles</h4><br><br>
 
@@ -180,10 +205,10 @@ function createPresentationL() {
 
     divPresentationL.innerHTML = `
                         <svg class="closeArrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g data-name="Layer 44" id="Layer_44"><path d="M40.61,15.38l-2.83-2.83a.51.51,0,0,0-.71,0L18,31.65a.48.48,0,0,0,0,.7l19.09,19.1a.52.52,0,0,0,.71,0l2.83-2.83a.51.51,0,0,0,0-.71L24.7,32,40.61,16.09A.51.51,0,0,0,40.61,15.38Z"/><path d="M32,3.5A28.5,28.5,0,1,0,60.5,32,28.54,28.54,0,0,0,32,3.5Zm0,52A23.5,23.5,0,1,1,55.5,32,23.52,23.52,0,0,1,32,55.5Z"/></g></svg>    
-                        <h3> LYON (69)</h3><br>
+                        <h3> LYON</h3><br>
                         <h3>2024/2025</h3>
                         <br>
-                        <h4>En cours de formation</h4><br>
+                        <h4>En cours de formation (69)</h4><br>
 
                         <h6>Développeur Web et Web Mobile </h6><br>
 
@@ -240,6 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function lightToOn() {
         titles.forEach(title => {
             title.style.borderColor = "#8A2BE2";
+
             title.style.boxShadow = "0 0 2px #8A2BE2, inset 0 0 2px #8A2BE2, 0 0 4px #8A2BE2, inset 0 0 4px #8A2BE2, 0 0 8px #8A2BE2, inset 0 0 8px #8A2BE2, 0 0 16px #8A2BE2, inset 0 0 16px #8A2BE2";
         });
 
@@ -249,6 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         arrowMaps.forEach(arrowMap => {
+
             arrowMap.style.filter = "drop-shadow(0 0 5px #8A2BE2) drop-shadow(0 0 10px #8A2BE2) drop-shadow(0 0 15px #8A2BE2)"; 
 
         });
