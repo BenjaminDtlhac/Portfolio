@@ -37,6 +37,9 @@ header {
     padding: 2% 2%;
     border-bottom: 2.5px var(--tertiaryColor) solid;
     box-shadow: 5px 5px 15px var(--quinaryColor);
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 body header :nth-child(2) {
