@@ -55,10 +55,10 @@ body header :nth-child(2) {
 
 header>div>p {
     padding-left: 2em;
-    width: 182%;
+    width: 140%;
     animation-name: defilement-rtl;
     /* référence à la règle @keyframes mise en oeuvre */
-    animation-duration: 25s;
+    animation-duration: 15s;
     /* valeur à ajuster suivant la longueur du message */
     animation-iteration-count: infinite;
     /* boucle continue */
@@ -70,7 +70,7 @@ header>div>p {
 
 @keyframes defilement-rtl {
     0% {
-        transform: translate3d(100%, 0, 0);
+        transform: translate3d(60%, 0, 0);
         /* position initiale à droite */
     }
 
