@@ -164,18 +164,21 @@ h1 {
 /**** SIDEFRONT ****/
 .sideFront {
     padding: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .sideFront h3 {
     text-transform: uppercase;
-    text-align: left;
+    text-align: center;
     font-size: 2.5vw;
     margin-bottom: 2.5rem;
 }
 
 .sideFront p {
-    text-align: justify;
-    font-size: clamp(1.1rem, 2vw, 2rem);
+    text-align: center;
+    font-size: 1.3rem;
 }
 
 .sideFront>button {
@@ -191,16 +194,17 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .sideBack p {
-    text-align: justify;
-    padding: 5%;
-    font-size: 1rem;
+    text-align: center;
+    padding: 1% 5% 0 5%;
+    font-size: 1.3rem;
 }
 
 .sideBack img {
-    height: 30%;
+    height: 40%;
     border-radius: 50px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;
 }
@@ -209,10 +213,103 @@ h1 {
     transform: rotateY(180deg);
 }
 
-.sideBack > button {
+.sideBack>button {
     display: none;
 }
 
+
+/******* Projects *******/
+.projet {
+    height: 55rem;
+}
+
+.projetsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5%;
+    position: relative;
+
+}
+
+.projetItem {
+    position: absolute;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+    height: 600px;
+    width: 450px;
+    border: 3px solid var(--quaternaryColor);
+    border-radius: 5px;
+}
+
+.projetItem:hover {
+    transform: rotateY(180deg);
+}
+
+.sideProjetItem {
+    backface-visibility: hidden;
+    position: absolute;
+    padding: 5%;
+    text-align: justify;
+
+    h3,
+    h4 {
+        text-align: center;
+    }
+
+    h4 {
+        font-family: 'caveat', cursive;
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+
+    .containerPicture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 90%;
+
+        svg {
+            width: auto;
+            height: 20rem;
+            fill: var(--quaternaryColor);
+        }
+    }
+
+    p {
+        margin-top: 1rem;
+    }
+}
+
+.cardFront {
+    width: 100%;
+    height: 100%;
+
+}
+
+.cardBack {
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    a {
+        margin-top: 1.1rem;
+        background-color: var(--quaternaryColor);
+        color: var(--quinaryColor);
+        border-radius: 10px;
+        padding: 2% 5%;
+        cursor: pointer;
+        font-size: 1rem;
+        text-decoration: none;
+        width: fit-content;
+    }
+
+}
 
 /******* Skills in progress *******/
 
@@ -557,83 +654,109 @@ footer :first-child {
         justify-content: center;
     }
 
-/******* Who i am ? *******/
+    /******* Who i am ? *******/
 
-.presenetationMySelf>div {
-    width: 90%;
-    margin-bottom: 1.3rem;
-    height: 110vh;
-}
+    .presenetationMySelf>div {
+        width: 90%;
+        margin-bottom: 1.3rem;
+        height: 80vh;
+    }
 
-.sideFront>h3 {
-    font-size: 1.5rem;
-}
+    .sideFront>h3 {
+        font-size: 1.5rem;
+    }
 
-.cardContainer {
-    height: 95%;
-    display: flex;
-    flex-direction: column;
-}
+    .cardContainer {
+        height: 95%;
+        display: flex;
+        flex-direction: column;
+    }
 
-.card {
-     height: 95%;
-}
+    .card {
+        height: 95%;
+    }
 
-.sideBack {
-    display: flex;
-    flex-direction: column;
-}
+    .sideBack {
+        display: flex;
+        flex-direction: column;
+    }
 
-.sideBack p {
-    font-size: 0.85rem;
-}
+    .sideBack>p,
+    .sideFront>p {
+        font-size: 0.75rem;
+    }
 
-.sideBack img {
-    height: 10%;
-    border-radius: 50px;
-}
+    .sideBack img {
+        height: 20%;
+        border-radius: 50px;
+    }
+
+    /*** projects ***/
+
+    .projet {
+        height: auto;
+    }
+    .projetItem {
+        position: relative;
+        margin: 5%;
+        height: 550px;
+        width: 300px;
+
+    }
+
+    .sideProjetItem {
+        .containerPicture {
+            svg {
+            height: 17rem;
+
+            }
+        }
+
+        p{
+            font-size: 0.8rem;
+        }
+    }
+
+    /*** Button ***/
+
+    .sideBack>button {
+        display: flex;
+    }
+
+    .sideFront>button {
+        display: flex;
+    }
+
+    .btnPresentation {
+        width: 40%;
+        display: flex;
+        justify-self: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        font-size: 1rem;
+    }
+
+    .sideFront>button {
+        left: 30%
+    }
 
 
-/*** Button ***/
-
-.sideBack>button {
-    display: flex;
-}
-
-.sideFront>button {
-    display: flex;
-}
-
-.btnPresentation {
-    width: 40%;
-    display: flex;
-    justify-self: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
-    font-size: 1rem;
-}
-
-.sideFront > button {
-    left : 30%
-}
-
-
-/******* Hard Skills*******/
-.js,
-.css,
-.symfony,
-.html,
-.php,
-.wordpress,
-.mysql,
-.github,
-.vueJs,
-.figma {
-    width: 100px;
-    height: 100px;
-    margin: 3%;
-}
+    /******* Hard Skills*******/
+    .js,
+    .css,
+    .symfony,
+    .html,
+    .php,
+    .wordpress,
+    .mysql,
+    .github,
+    .vueJs,
+    .figma {
+        width: 100px;
+        height: 100px;
+        margin: 3%;
+    }
 
 
     /** PRO CAREER **/
@@ -689,7 +812,7 @@ footer :first-child {
 
 /*** TABLET ***/
 @media (min-width: 518px) and (max-width: 768px) {
-    
+
     h1 {
         font-size: 4rem;
     }
@@ -715,7 +838,8 @@ footer :first-child {
         height: 95%;
     }
 
-    .sideBack, .sideFront {
+    .sideBack,
+    .sideFront {
         flex-direction: column;
     }
 
@@ -723,7 +847,7 @@ footer :first-child {
         height: 20%;
     }
 
-    .sideBack > p{
+    .sideBack>p {
         font-size: 0.8rem;
     }
 
@@ -746,8 +870,8 @@ footer :first-child {
         bottom: 0;
     }
 
-    .sideFront > button {
-        left : 35%
+    .sideFront>button {
+        left: 35%
     }
 
 
